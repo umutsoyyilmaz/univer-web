@@ -6,6 +6,9 @@
     <title>Univer Yazılım ve Danışmanlık | SAP & AI Çözümleri</title>
     <meta name="description" content="SAP S/4HANA implementasyonları ve AI destekli proje yönetimi çözümleri. Univer ile dijital dönüşümünüzü hızlandırın.">
     
+    <!-- Netlify Identity -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -2069,6 +2072,19 @@
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(el);
     });
+</script>
+
+<!-- Netlify Identity Widget -->
+<script>
+    if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+            if (!user) {
+                window.netlifyIdentity.on("login", () => {
+                    document.location.href = "/admin/";
+                });
+            }
+        });
+    }
 </script>
 
 </body>
