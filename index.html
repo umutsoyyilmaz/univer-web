@@ -12,12 +12,12 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     
     <style>
         /* ===== CSS Variables ===== */
         :root {
-            --bg-app: #F8F9FC;
+            --bg-app: #FAFAF9;
             --bg-surface: #FFFFFF;
             --bg-dark: #0F1419;
             --bg-darker: #080B0F;
@@ -140,14 +140,22 @@
         }
 
         .logo {
-            font-family: var(--font-display);
-            font-size: 1.5rem;
-            font-weight: 700;
-            letter-spacing: -1px;
-            background: var(--ai-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-family: 'Inter', var(--font-display);
+            font-size: 1.6rem;
+            font-weight: 800;
+            letter-spacing: -1.5px;
+        }
+
+        .logo .logo-u {
+            color: #0066FF;
+        }
+
+        .logo .logo-rest {
+            color: var(--text-primary);
+        }
+
+        .logo.logo-light .logo-rest {
+            color: white;
         }
 
         nav {
@@ -1417,7 +1425,7 @@
 <!-- Header -->
 <header>
     <div class="container">
-        <a href="#" class="logo">UNIVER</a>
+        <a href="#" class="logo"><span class="logo-u">U</span><span class="logo-rest">NIVER</span></a>
         <nav>
             <a href="#hizmetler">Hizmetler</a>
             <a href="#copilot">AI Co-Pilot</a>
@@ -1977,7 +1985,7 @@
     <div class="container">
         <div class="footer-content">
             <div class="footer-brand">
-                <a href="#" class="logo">UNIVER</a>
+                <a href="#" class="logo logo-light"><span class="logo-u">U</span><span class="logo-rest">NIVER</span></a>
                 <p>SAP dünyasındaki derin tecrübemizi modern AI teknolojileriyle birleştirerek, projelerinizde zaman ve maliyet tasarrufu sağlıyoruz.</p>
                 <div class="footer-social">
                     <a href="#" aria-label="LinkedIn">
